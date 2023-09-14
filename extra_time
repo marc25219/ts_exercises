@@ -1,0 +1,12 @@
+function countHours(year, holidays) {
+  let totalHours = 0; 
+
+  for (const freeDay of holidays) {
+    let day: Date = new Date(freeDay + '/' + year);
+    if ((day.getDay() != 0) && (day.getDay() != 6)) {
+      totalHours += 2;
+    }
+  }
+  
+  return totalHours
+}
